@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Drill and Practice Questions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .question {
+            margin-bottom: 10px;
+        }
+
+        .options label {
+            display: block;
+        }
+
+        .submit-button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Drill and Practice Questions</h1>
+
+    <div class="question">
+        <p>1. What is the capital of France?</p>
+        <div class="options">
+            <label>
+                <input type="radio" name="q1" value="a"> a) Paris
+            </label>
+            <label>
+                <input type="radio" name="q1" value="b"> b) London
+            </label>
+            <label>
+                <input type="radio" name="q1" value="c"> c) Rome
+            </label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>2. Which planet is known as the Red Planet?</p>
+        <div class="options">
+            <label>
+                <input type="radio" name="q2" value="a"> a) Mars
+            </label>
+            <label>
+                <input type="radio" name="q2" value="b"> b) Venus
+            </label>
+            <label>
+                <input type="radio" name="q2" value="c"> c) Jupiter
+            </label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>3. What is 5 + 7?</p>
+        <div class="options">
+            <label>
+                <input type="radio" name="q3" value="a"> a) 10
+            </label>
+            <label>
+                <input type="radio" name="q3" value="b"> b) 11
+            </label>
+            <label>
+                <input type="radio" name="q3" value="c"> c) 12
+            </label>
+        </div>
+    </div>
+
+    <button class="submit-button" onclick="checkAnswers()">Submit Answers</button>
+
+    <script>
+        function checkAnswers() {
+            const correctAnswers = ["a", "a", "c"]; // Replace with the correct answers for each question
+            let totalQuestions = 3; // Change this number if you add more questions
+            let score = 0;
+
+            for (let i = 1; i <= totalQuestions; i++) {
+                const selectedAnswer = document.querySelector(`input[name=q${i}]:checked`);
+
+                if (selectedAnswer) {
+                    const selectedValue = selectedAnswer.value;
+                    if (selectedValue === correctAnswers[i - 1]) {
+                        score++;
+                    }
+                }
+            }
+
+            alert(`You scored ${score} out of ${totalQuestions} questions.`);
+        }
+    </script>
+</body>
+</html>
