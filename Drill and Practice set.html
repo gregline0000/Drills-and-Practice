@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I.C.T Drill & Practice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .options {
+            margin-left: 20px;
+        }
+        .option {
+            margin-bottom: 5px;
+        }
+        button {
+            display: block;
+            margin-top: 10px;
+        }
+        .feedback {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>I.C.T Drill & Practice Quiz</h1>
+        <div class="question">
+            1. What does "I.C.T" stand for?
+        </div>
+        <div class="options">
+            <div class="option">
+                <input type="radio" name="question1" value="a">
+                <label for="a">Information and Computer Technology</label>
+            </div>
+            <div class="option">
+                <input type="radio" name="question1" value="b">
+                <label for="b">Internet and Communication Technology</label>
+            </div>
+            <div class="option">
+                <input type="radio" name="question1" value="c">
+                <label for="c">Information and Communication Technology</label>
+            </div>
+        </div>
+        <button onclick="checkAnswer()">Submit</button>
+        <div class="feedback" id="feedback"></div>
+        <div class="container">
+            <h1>I.C.T Drill & Practice Quiz</h1>
+            <div class="question">
+                2. What does "R.A.M" stand for?
+            </div>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="question2" value="a">
+                    <label for="a">Random Accessive Method</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="question2" value="b">
+                    <label for="b">Read Access Memory</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="question2" value="c">
+                    <label for="c">Random Acess Memory</label>
+                </div>
+            </div>
+            <button onclick="checkAnswer()">Submit</button>
+            <div class="feedback" id="feedback"></div>
+    </div>
+
+    <!-- You can add more questions and options here -->
+
+    <script>
+        function checkAnswer() {
+            const selectedOption = document.querySelector('input[name="question1"]:checked');
+            if (!selectedOption) {
+                document.getElementById('feedback').textContent = "Please select an option.";
+                return;
+            }
+
+            const correctAnswer = "c";
+            const userAnswer = selectedOption.value;
+
+            if (userAnswer === correctAnswer) {
+                document.getElementById('feedback').textContent = "Correct answer!";
+            } else {
+                document.getElementById('feedback').textContent = "Incorrect answer. Try again!";
+            }
+        }
+    </script>
+</body>
+</html>
