@@ -12,7 +12,10 @@ export const Footer: React.FC = () => {
           <a href="#contact">Contact</a>
           <a href="#design">Design</a>
         </nav>
-        <p className="text-gray-600">Privacy: This site uses privacy‑friendly analytics (Plausible) without cookies.</p>
+        <p className="text-gray-600">
+          Privacy: This site uses privacy‑friendly analytics (Plausible) without cookies. 
+          <a className="underline" href="/privacy.txt">Read more</a>
+        </p>
       </div>
     </footer>
   );
