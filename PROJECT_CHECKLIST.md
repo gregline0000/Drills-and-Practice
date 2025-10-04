@@ -1,0 +1,14 @@
+- Hero with name, tagline, CTAs
+- About with education, roles, training, goals
+- Projects: 3 featured with repo/demo links
+- Resume: downloadable PDF
+- Contact: email, LinkedIn, GitHub, location, form with validation and honeypot
+- Design decisions section
+- Metrics badges section
+- Footer with sitemap and privacy note
+- SEO meta and Open Graph
+- Performance: lazy images, caching, critical CSS
+- Accessibility: WCAG AA, focus states, ARIA
+- CI: build and test workflow
+- Test: contact form validation
+- Deployment: Netlify config

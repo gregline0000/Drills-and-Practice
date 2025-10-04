@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --focus-outline: 3px solid #2e7d32;
+}
+
+/* Visible focus */
+:focus {
+  outline: var(--focus-outline);
+  outline-offset: 2px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Critical CSS for above-the-fold hero text */
+.hero-title { @apply text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight; }
+.hero-subtitle { @apply mt-4 text-lg md:text-2xl text-gray-700; }
+.hero-cta { @apply mt-6 flex flex-wrap gap-3; }
